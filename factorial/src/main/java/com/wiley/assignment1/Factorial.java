@@ -34,12 +34,16 @@ public class Factorial {
 		*/
 
 		//YOUR CODE STARTS HERE
+		this.num = this.scanner.nextInt();
 
-		return -1;
-
+		if (this.num >= 1 && this.num <= 10){
+			return this.num;
+		}
+		else {
+			this.printStream.print("Invalid entry. Please enter an integer between 1 and 10, inclusive.");
+			return -1;
+		}
 		//YOUR CODE ENDS HERE
-		 
-			
 	 }
 	
 	 
@@ -47,13 +51,16 @@ public class Factorial {
 		
 		  /*
 		  Use this method to calculate the factorial of the number input by the user.
-		  
+
 		  - All code should be inside the placeholders below.
+
 		*/
 		 
 		int result = 1;
 		//YOUR CODE STARTS HERE
-
+		for (int i = 1; i <= num; i++){
+			result = result * i;
+		}
  
 
 		//YOUR CODE ENDS HERE
