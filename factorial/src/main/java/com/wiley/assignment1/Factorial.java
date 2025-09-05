@@ -34,15 +34,20 @@ public class Factorial {
 		*/
 
 		//YOUR CODE STARTS HERE
-		this.num = this.scanner.nextInt();
+		 if (this.scanner.hasNextInt()) {
+			 this.num = this.scanner.nextInt();
 
-		if (this.num >= 1 && this.num <= 10){
-			return this.num;
-		}
-		else {
-			this.printStream.print("Invalid entry. Please enter an integer between 1 and 10, inclusive.");
-			return -1;
-		}
+			 if (this.num >= 1 && this.num <= 10) {
+				 return this.num;
+			 } else {
+				 this.printStream.print("Invalid entry. Please enter an integer between 1 and 10, inclusive.");
+				 return -1;
+			 }
+		 } else {
+			 // Αν η είσοδος δεν είναι ακέραιος (π.χ. "abc")
+			 this.printStream.print("Invalid entry. Please enter an integer between 1 and 10, inclusive.");
+			 return -1;
+		 }
 		//YOUR CODE ENDS HERE
 	 }
 	
